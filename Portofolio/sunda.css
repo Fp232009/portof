@@ -1,0 +1,135 @@
+/* <-- Variabel Global --> */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --header-height: 3rem;
+
+    /* colors */
+    --primary: #1B1C22;
+    --secondary: #FBB465;
+    --silver: #E6E6E6;
+
+    /* fonts */
+    --fontDefaults: 'Poppins', sans-serif;
+    --fontLogo: 'Kanit', sans-serif;
+    --heading1: 2.625rem;
+    --heading2: 1.875rem;
+    --normal-font-size: 1.125rem;
+    --nav-font-size: 1rem;
+
+    /* z-index */
+    --z-fixed: 1;
+}
+
+/* All */
+body {
+    overflow-x: hidden;
+    background-color: var(--primary);
+    scroll-behavior: smooth;
+    font-family: var(--fontDefaults);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--fontLogo);
+    font-size: var(--heading1);
+    color: var(--silver);
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--silver);
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--silver);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section */
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-family: var(--fontLogo);
+    font-size: var(--heading2);
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: var(--normal-font-size);
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--primary);
+    color: var(--silver);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: calc(var(--heading1) * 0.9);
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section h2 {
+        font-size: calc(var(--heading2) * 0.9);
+    }
+
+    .section p {
+        font-size: calc(var(--normal-font-size) * 0.8);
+    }
+}
